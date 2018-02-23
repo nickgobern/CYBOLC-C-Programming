@@ -143,7 +143,7 @@ double modify_me(int x)
 	{
 		x<=2;
 	}
-//tent if/else statement
+//tenth if/else statement
 	if((x%2)==0)
 	{
 		return 0;
