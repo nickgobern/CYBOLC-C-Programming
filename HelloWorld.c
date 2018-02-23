@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
 	puts("Was Poppin Bitches");
 	return 0;
