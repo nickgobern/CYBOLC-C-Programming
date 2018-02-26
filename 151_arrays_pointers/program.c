@@ -13,6 +13,20 @@ int main(void)
     n[index] = rand() % 8192;
 
   /* Student implementation */
+  int min = 9999;
+  int max = 0;
+
+  for(index = 0; index < 100; index++)
+	{
+	if(n[index] < min)
+		min = n[index];
+	if(n[index] > max)
+		max = n[index];	
+	}
+
+
+  printf("%d,%d\n",min,max);
+
 
   return 0;
 }
