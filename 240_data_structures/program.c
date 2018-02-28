@@ -75,7 +75,43 @@ struct node* list_find(struct node* head, int value)
 
 struct node* list_delete(struct node* head, struct node* unlink)
 {
-  #pragma message "implementation required"
+  //#pragma message "implementation required"
+  struct node* current = head;
+  while(current->next != NULL && unlink != NULL)
+  {
+  	if(current->next == unlink)// if deleting anywhere in linked list
+     {
+      	current->next = current->next->next;
+		free(unlink);
+		printf("DEBUG A: %d\n", current->data);
+      	return head;
+     }
+   	else if (current == unlink)// if deleting head move head to then next value
+	{
+	 	current = current->next;
+		free(unlink);
+		printf("DEBUG B: %d\n", current->data);
+		return head; 
+	}
+	else if (current->next->next  == NULL)// if deleting tail set next current value to null
+	{
+	     current->next = NULL;
+		free(unlink);
+		printf("DEBUG C: %d\n", current->data);
+		return head;
+	}
+	else if(current->next == NULL)// when you reach the end of a list 
+	{
+		printf("DEBUG end of list : %d\n", current->data);
+		free(unlink);
+		return head;		
+ 	}
+	else// if not found then increment
+	{
+		current = current->next;
+		//printf("DEBUG Increment : %d\n", current->data);
+	}
+  }
   return NULL;
 }
 
