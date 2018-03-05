@@ -22,9 +22,9 @@ struct myStruct
 int main(void)
 {
     int array[4] = {2,3,8,14};
-    struct myStruct* s1 = (struct myStruct*)malloc(sizeof(struct myStruct));    
-    strcpy(s1->p1, "buggs_bunny");
-    s1->p2 = 0xdeafdeaf;
+    struct myStruct* s1 = (struct myStruct*)malloc(sizeof(struct myStruct));//dynamically allocates memory
+    strcpy(s1->p1, "buggs_bunny");//copies string
+    s1->p2 = 0xdeafdeaf;// assigns value to p2 with pointer of s1
     s1->p3 = 1910.0777;
     memcpy(s1->p4, array, sizeof(array));
     s1->p5 = 0xFFFFFFFF; 
