@@ -19,7 +19,7 @@ int main(void)
     	{
             printf("\nYou entered %s\n", name);
     	}
-    }while(name[0] == '\0' || name[0] == '\n');
+    }while(name[0] == '\0' || name[0] == '\n');//validates input
 
     return 0;
 }
