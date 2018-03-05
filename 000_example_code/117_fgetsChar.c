@@ -18,7 +18,7 @@ int main(void)
     	printf("\nPlease enter a character: ");
     	if (fgets(line, sizeof(line), stdin)) 
     	{
-            if (1 == sscanf(line, "%c", &i)) 
+            if (1 == sscanf(line, "%c", &i)) //checks to make sure all values were entered properly
 	    {
                 printf("\nYou entered %c\n", i);
             }
