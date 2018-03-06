@@ -40,6 +40,8 @@ long practice_q1(int parm1, int parm2, int parm3, int parm4)
   sum = sum + parm3;
   sum = sum + parm4;
   return sum;
+	
+	//could also return parm1 + parm2 + parm3 + parm4;
 }
 
 #endif //SUPPRESS_PRACTICE_QUESTION_1
@@ -126,12 +128,19 @@ void *practice_q3()
 	unsigned int intNumber;
      float number;
   };
-
+  if(member)
+	{
   struct member* pointer = (struct member*) malloc(sizeof(struct member));; 
   strcpy(pointer->phrase,"C programming for the LULZ");
+	memset(ret,0,sizeof(struct member)); //optional
   pointer->intNumber=0xC0FFEE00;
   pointer->number = 3.1415;
-	
+		
+		//if copying to int array you can add to index, or add using memcpy.
+		/*
+		memcpy(p->arr, arr 0, sizeof(int) * num of elemts)
+		*/
+	}
   return pointer; 
 }
 
@@ -158,10 +167,7 @@ void *practice_q3()
  */
 int practice_q4()
 {
-  	char buffer [101];
-
-  
-
+  char buffer [101];// given bytes +1 = 100+1
 	if(fgets(buffer,sizeof(buffer),stdin)== NULL)
 	{
 		return 1;
