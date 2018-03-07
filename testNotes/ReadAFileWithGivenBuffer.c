@@ -10,7 +10,7 @@ int myfunc(const char *path, const int lineNumber, char* buffer)
 	FILE* fp = fopen(path,"r");//read in file from given path
 
 	if(!fp)// if file is null
-		return -1
+		return -1;
 	
 	int lineCounter  = 1;
 	
